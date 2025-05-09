@@ -3,9 +3,9 @@
 ## Changing Display with xrandr
 xrandr:
 
-    --mode"   switch mode
+    --mode     switch mode
 
-    "--output" choose the output
+    --output   choose the output
 
     example:
 
