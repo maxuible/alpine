@@ -15,8 +15,15 @@ xrandr:
 
 ---
 ## Dmenu
-setting up a script for dmenu:
+
+apks needed:
+```sh
+doas apk add xsetroot
+```
+
+
 script for updating the time:
+
 ```sh
 while true; do
     xsetroot -name "$(date)"
@@ -33,7 +40,11 @@ inside .xinitrc:
 ## Cursor
 The below apk's are for setting up cusor theme
 
-adwaita-icon-theme libxcursor
+
+```sh
+doas apk add adwaita-icon-theme libxcursor
+```
+
 
 inside .xinitrc:
 ```sh
@@ -44,3 +55,20 @@ inside .Xdefaults:
 Xcursor.theme: Adwaita
 Xcursor.size: 48
 ```
+
+---
+## Background image
+Apk's needed:
+
+```sh
+doas apk add feh
+```
+
+inside xinitrc:
+```sh
+feh --bg-scale ~/path_to_bg &
+``` 
+
+
+
+
