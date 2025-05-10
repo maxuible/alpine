@@ -3,9 +3,9 @@
 set -e
 set -x
 
-cp ./ashrc     ~/.ashrc
-cp ./profile   ~/.profile
-cp ./xinitrc   ~/.xinitrc
-cp ./vimrc     ~/.vimrc
+ln -s ~/alpine/config/ashrc     ~/.ashrc
+ln -s ~/alpine/config/profile   ~/.profile
+ln -s ~/alpine/config/xinitrc   ~/.xinitrc
+ln -s ~/alpine/config/vimrc     ~/.vimrc
 
 
