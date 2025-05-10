@@ -8,12 +8,12 @@ dmenu_version="5.3"
 st_version="0.9.2"
 
 
-rm ~/.ashrc
+rm ~/.shinit
 rm ~/.profile
 rm ~/.xinitrc
 rm ~/.vimrc
 
-ln -s ~/alpine/config/ashrc     ~/.ashrc
+ln -s ~/alpine/config/shinit     ~/.shinit
 ln -s ~/alpine/config/profile   ~/.profile
 ln -s ~/alpine/config/xinitrc   ~/.xinitrc
 ln -s ~/alpine/config/vimrc     ~/.vimrc
