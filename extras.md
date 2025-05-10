@@ -67,7 +67,18 @@ doas apk add feh
 inside xinitrc:
 ```sh
 feh --bg-scale ~/path_to_bg &
-``` 
+```
+
+---
+## Alias's in ash
+ash is a different from bash in that .ashrc are not loaded on startup of the shell
+
+so you have to add an ENV varible to the profile like so
+
+```sh
+export ENV=$HOME/.ashrc
+```
+then you can use it .ashrc freely
 
 
 
