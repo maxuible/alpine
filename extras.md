@@ -14,7 +14,7 @@ xrandr:
 (this can be set up in xinitrc)
 
 ---
-## Dmenu
+## Dmenu Notes
 
 apks needed:
 ```sh
@@ -37,7 +37,7 @@ inside .xinitrc:
 ```
 
 ---
-## Cursor
+## Cursor Notes
 The below apk's are for setting up cusor theme
 
 
@@ -57,7 +57,7 @@ Xcursor.size: 48
 ```
 
 ---
-## Background image
+## Background image Notes
 Apk's needed:
 
 ```sh
@@ -70,7 +70,7 @@ feh --bg-scale ~/path_to_bg &
 ```
 
 ---
-## Alias's in ash
+## Alias's in ash Notes
 ash is a different from bash in that .ashrc are not loaded on startup of the shell
 
 so you have to add an ENV varible to the profile like so
