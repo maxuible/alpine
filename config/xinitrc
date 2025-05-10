@@ -2,7 +2,7 @@
 
 xrandr --output HDMI-2 --mode 1920x1080
 
-~/alpine/status_bar.sh &
+~/alpine/scripts/status_bar.sh &
 
 feh --bg-max ~/.bg.jpg &
 
