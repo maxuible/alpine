@@ -1,8 +1,11 @@
 #!/bin/sh
 
-export PS1='[\u@\033[32m\h\033[0m] \033[34m\w\033[0m\ $ '
+export PS1='[\u@\033[32m\h\033[0m \033[0m\\w]$ '
 
 export ENV=$HOME/.shinit
 
 export SHELL=/bin/ash
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
