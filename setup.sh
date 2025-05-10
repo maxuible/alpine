@@ -9,7 +9,7 @@ st_version="0.9.2"
 doas setup-xorg-base
 
 #user configs pre-reqs
-doas apk add feh vim xrandr
+doas apk add feh vim xrandr xsetroot
 
 # dwm
 doas setup-xorg-base
