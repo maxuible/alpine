@@ -6,10 +6,6 @@ dwm_version="6.5"
 dmenu_version="5.3"
 st_version="0.9.2"
 
-fullurl="https://dl.suckless.org/dwm/dwm-${dwm_version}.tar.gz"
-
-echo $fullurl
-
 doas setup-xorg-base
 
 #user configs pre-reqs
