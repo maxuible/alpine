@@ -1,0 +1,4 @@
+#!/bin/sh
+
+alias ls='ls --color'
+alias ll='ls -al --color'
