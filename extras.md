@@ -80,6 +80,15 @@ export ENV=$HOME/.ashrc
 ```
 then you can use it .ashrc freely
 
+---
+## Tailscale notes:
+upload the image on the other machine
+
+on the linux machine do
+```sh
+doas tailscale file get .
+```
+
 
 
 
