@@ -1,18 +1,14 @@
 #!/bin/sh
 
-echo "Username?"
-
-read username
-
 set -x
 set -e
 
-top_dir=$(pwd)
+dwm_version="6.5"
+dmenu_version="5.3"
+st_version="0.9.2"
 
-# doas
-apk add doas
-
-echo "permit persist :wheel" >> /etc/doas.conf
+#user configs pre-reqs
+doas apk add feh vim xrandr
 
 # dwm
 doas setup-xorg-base
@@ -26,37 +22,24 @@ doas rc-service dbus start
 # st
 doas apk add ncurses font-dejavu
 
-touch /home/$username/.xinitrc
+cd /opt
 
-echo "exec dwm" > /home/$username/.xinitrc
+wget https://dl.suckless.org/dwm/dwm-$dwm_verison.tar.gz
+tar -xvzf dwm-$dwm_version.tar.gz
 
-mkdir /home/$username/suckless
+wget https://dl.suckless.org/tools/dmenu-$dmenu_version.tar.gz
+tar -xvzf dmenu-$dmenu_version.tar.gz
 
-cd /home/$username/suckless
+wget https://dl.suckless.org/st/st-$st_version.tar.gz
+tar -xvzf st-$st_version.tar.gz
 
-wget https://dl.suckless.org/dwm/dwm-6.5.tar.gz
-tar -xvzf dwm-6.5.tar.gz
-cd dwm-6.5
+sh ~/alpine/config/mvconfig.sh
+
+cd /opt/dwm-$dwm_version
 doas make clean install
-
-cd ..
-
-wget https://dl.suckless.org/tools/dmenu-5.3.tar.gz
-tar -xvzf dmenu-5.3.tar.gz
-cd dmenu-5.3
+cd /opt/dmenu-$dmenu_version
 doas make clean install
+cd /opt/dmenu-$st_version
 
-cd ..
-
-wget https://dl.suckless.org/st/st-0.9.2.tar.gz
-tar -xvzf st-0.9.2.tar.gz
-cd st-0.9.2
-doas make clean install
-
-cd $top_dir
-mv ./setup.sh /home/$username/
-
-cd /home/$username/
-doas chown -R $username ./*
-doas chown $username ./.xinitrc
+cd
 
