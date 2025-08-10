@@ -8,7 +8,7 @@ st_version="0.9.2"
 
 doas setup-xorg-base
 
-#user configs pre-reqs
+# user configs pre-reqs
 doas apk add feh vim xrandr xsetroot
 
 # dwm
@@ -22,6 +22,9 @@ doas rc-service dbus start
 
 # st
 doas apk add ncurses font-dejavu
+
+
+# download suckless software WM/DE
 
 cd /opt
 

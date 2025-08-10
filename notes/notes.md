@@ -71,16 +71,17 @@ feh --bg-scale ~/path_to_bg &
 
 ---
 ## Alias's in sh Notes
-sh is a different from bash in that .bashrc does not have an something similar loaded on startup of the shell
+sh is a different from bash: ash does not have an .bashrc or anything
+similar loaded on startup of the shell
 
-so you have to add an ENV varible to the profile like so
+so you have to add an ENV varible to the .profile like below
 
 ```sh
 export ENV=$HOME/.shinit
 ```
 (sh init)
 
-then alias can be added freely
+then .shinit can be used like a .bashrc
 
 ---
 ## Tailscale notes:
