@@ -6,13 +6,16 @@ dwm_version="6.5"
 dmenu_version="5.3"
 st_version="0.9.2"
 
-doas adduser max audio
-doas adduser max video
+doas adduser $USER audio
+doas adduser $USER video # THIS IS CONSIDER A SECURITY RISK
 
 doas setup-xorg-base
 
 # user configs pre-reqs
-doas apk add feh vim xrandr xsetroot
+doas apk add feh vim xrandr xsetroot 
+
+# audio
+doas apk add alsaconf
 
 # dwm
 doas setup-xorg-base
