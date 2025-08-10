@@ -6,6 +6,9 @@ dwm_version="6.5"
 dmenu_version="5.3"
 st_version="0.9.2"
 
+doas adduser max audio
+doas adduser max video
+
 doas setup-xorg-base
 
 # user configs pre-reqs
@@ -14,15 +17,16 @@ doas apk add feh vim xrandr xsetroot
 # dwm
 doas setup-xorg-base
 
-doas apk add make gcc musl-dev libx11-dev libxft-dev libxinerama-dev dbus dbus-x11
+doas apk add make gcc musl-dev libx11-dev libxft-dev libxinerama-dev
 
-doas rc-update add dbus
+# dbus dbus-x11
 
-doas rc-service dbus start
+# doas rc-update add dbus
+
+# doas rc-service dbus start
 
 # st
 doas apk add ncurses font-dejavu
-
 
 # download suckless software WM/DE
 
