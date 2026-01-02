@@ -1,9 +1,0 @@
-syntax on
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set listchars=trail:·,lead:·
-set mouse=a
-set list
-set colorcolumn=80
