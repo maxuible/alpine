@@ -6,9 +6,9 @@ dwm_version="6.6"
 dmenu_version="5.4"
 st_version="0.9.3"
 
-doas adduser $USER audio
-doas adduser $USER video # THIS IS CONSIDER A SECURITY RISK
-doas adduser $USER input
+# doas adduser $USER audio
+# doas adduser $USER video # THIS IS CONSIDER A SECURITY RISK
+# doas adduser $USER input
 
 doas setup-xorg-base
 
