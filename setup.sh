@@ -2,17 +2,18 @@
 
 set -x
 
-dwm_version="6.5"
-dmenu_version="5.3"
-st_version="0.9.2"
+dwm_version="6.6"
+dmenu_version="5.4"
+st_version="0.9.3"
 
 doas adduser $USER audio
 doas adduser $USER video # THIS IS CONSIDER A SECURITY RISK
+doas adduser $USER input
 
 doas setup-xorg-base
 
 # user configs pre-reqs
-doas apk add feh vim xrandr xsetroot 
+doas apk add xrandr xsetroot 
 
 # audio
 doas apk add alsaconf
@@ -21,12 +22,6 @@ doas apk add alsaconf
 doas setup-xorg-base
 
 doas apk add make gcc musl-dev libx11-dev libxft-dev libxinerama-dev
-
-# dbus dbus-x11
-
-# doas rc-update add dbus
-
-# doas rc-service dbus start
 
 # st
 doas apk add ncurses font-dejavu
